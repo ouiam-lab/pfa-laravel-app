@@ -25,7 +25,7 @@ class ReviewController extends Controller {
 
         $review->save();
 
-        return back()->with(["status" => "Your reveiw created successfuly"]);
+        return back()->with(["status" => "Your reveiw created "]);
     }
 
     public function update(Request $request) {
@@ -40,6 +40,6 @@ class ReviewController extends Controller {
 
         $review->update($request->only(["title", "rating", "comment"]));
 
-        return back()->with(["status" => "Review updated successfuly"]);
+        return back()->with(["status" => "Review updated "]);
     }
 }
